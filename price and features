@@ -1,0 +1,28 @@
+plt.figure(figsize=(12,6))
+sns.boxplot(data=df,
+            x="CarName",
+            y="price")
+plt.xticks(rotation=90)
+plt.title("Price by Brand")
+plt.show()
+plt.figure(figsize=(8,5))
+sns.scatterplot(data=df,
+                x="highwaympg",
+                y="price")
+plt.title("Mileage vs Price")
+plt.show()
+plt.figure(figsize=(8,6))
+plt.scatter(y_test, y_pred)
+plt.plot([y_test.min(), y_test.max()],
+         [y_test.min(), y_test.max()],
+         color='red')
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.title("Actual vs Predicted Prices")
+plt.show()importance = model.feature_importances_
+
+plt.figure(figsize=(10,5))
+plt.bar(X.columns, importance)
+plt.xticks(rotation=90)
+plt.title("Feature Importance")
+plt.show()
