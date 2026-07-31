@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(8,5))
+sns.histplot(df["price"], bins=30, kde=True)
+plt.title("Distribution of Car Prices")
+plt.xlabel("Price")
+plt.ylabel("Count")
+plt.show()
